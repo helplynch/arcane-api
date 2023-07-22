@@ -1,0 +1,55 @@
+-- Made by SlimShady
+
+local AlertGui = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local Text = Instance.new("TextLabel")
+
+AlertGui.Visible = false
+
+local arcane_api = {
+
+  alert = function(alertxt)
+    AlertGui.Visible = true
+    Text.Text = alertxt
+    wait(5)
+    AlertGui.Visible = false
+  end
+
+}
+
+
+AlertGui.Name = "AlertGui"
+AlertGui.Parent = game.StarterGui["V3"]
+AlertGui.BackgroundColor3 = Color3.new(0.615686, 0.615686, 0.615686)
+AlertGui.BorderColor3 = Color3.new(0, 0, 0)
+AlertGui.BorderSizePixel = 0
+AlertGui.Position = UDim2.new(0.00641539693, 0, 0.919047594, 0)
+AlertGui.Size = UDim2.new(0, 226, 0, 42)
+
+UICorner.Parent = AlertGui
+
+ImageLabel.Parent = AlertGui
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0309733152, 0, 0.142857194, 0)
+ImageLabel.Size = UDim2.new(0, 30, 0, 30)
+ImageLabel.Image = "rbxassetid://7634887649"
+
+Text.Name = "Text"
+Text.Parent = AlertGui
+Text.BackgroundColor3 = Color3.new(1, 1, 1)
+Text.BackgroundTransparency = 1
+Text.BorderColor3 = Color3.new(0, 0, 0)
+Text.BorderSizePixel = 0
+Text.Position = UDim2.new(0.199115083, 0, 0.142857149, 0)
+Text.Size = UDim2.new(0, 180, 0, 30)
+Text.Font = Enum.Font.Arial
+Text.Text = "AlertMsg"
+Text.TextColor3 = Color3.new(1, 1, 1)
+Text.TextScaled = true
+Text.TextSize = 14
+Text.TextWrapped = true
+Text.TextXAlignment = Enum.TextXAlignment.Left
